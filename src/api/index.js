@@ -2,7 +2,7 @@ import axios from "axios";
 import * as SecureStore from "expo-secure-store";
 
 // Change this to your backend URL
-const API_BASE_URL = "http://192.168.0.237:5056/api";
+const API_BASE_URL = "https://voter-list-backend-gh87.onrender.com/api";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
