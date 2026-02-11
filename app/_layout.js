@@ -6,6 +6,7 @@ import Toast from "react-native-toast-message";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import useAuthStore from "../src/stores/authStore";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -50,8 +51,12 @@ export default function RootLayout() {
   if (!fontsLoaded && !fontError) return null;
 
   return (
-    <>
-      <StatusBar style="dark" />
+    <SafeAreaView
+      className="flex-1 bg-white"
+      edges={["top", "bottom"]}
+      // style={{ flex: 1 }}
+    >
+      <StatusBar style="dark" backgroundColor="#f9fafb" />
       <Stack
         screenOptions={{
           headerShown: false,
@@ -92,6 +97,6 @@ export default function RootLayout() {
         />
       </Stack>
       <Toast />
-    </>
+    </SafeAreaView>
   );
 }
