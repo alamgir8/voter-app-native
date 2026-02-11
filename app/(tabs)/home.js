@@ -38,6 +38,7 @@ export default function HomeScreen() {
     <SafeAreaView className="flex-1 bg-dark-50">
       <ScrollView
         className="flex-1"
+        contentContainerStyle={{ paddingBottom: 120 }}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }

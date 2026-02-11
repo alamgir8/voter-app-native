@@ -317,7 +317,7 @@ export default function SearchScreen() {
             ) : null
           }
           showsVerticalScrollIndicator={false}
-          contentContainerStyle={{ paddingBottom: 20 }}
+          contentContainerStyle={{ paddingBottom: 120 }}
         />
       </View>
 
